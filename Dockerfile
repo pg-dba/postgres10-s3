@@ -1,4 +1,4 @@
-FROM sqldbapg/postgres10:latest
+FROM sqldbapg/postgres:10
 
 RUN export DEBIAN_FRONTEND=noninteractive && apt-get update && \
     apt-get -y install awscli && \
