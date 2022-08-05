@@ -11,12 +11,12 @@ https://www.2ndquadrant.com/en/blog/barman-cloud-part-2-cloud-backup/<BR>
 https://www.2ndquadrant.com/en/blog/barman-2-11-barman-cloud-restore-and-barman-cloud-wal-restore/<BR>
 http://docs.pgbarman.org/release/2.15/manual.pdf<BR>
 
-<DIV>
+<DIV><PRE>
 aws --endpoint-url http://u20d1h4:9000 s3 ls backups/&#36;(hostname) --recursive<BR>
 aws --endpoint-url &#36;&#123;MINIO_ENDPOINT_URL&#125; s3 ls $&#123;MINIO_BACKET&#125;/$(hostname) --recursive<BR>
 barman-cloud-backup-list --endpoint-url http://u20d1h4:9000 s3://backups $(hostname)<BR>
 barman-cloud-backup-list --endpoint-url ${MINIO_ENDPOINT_URL} s3://${MINIO_BACKET} $(hostname)<BR>
-</DIV>
+</PRE></DIV>
 
 
 <BR><B>Environment</B><BR>
