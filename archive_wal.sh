@@ -24,12 +24,12 @@ exec 2>>${LOG_DBG_FILE}
 fi
 
 if [[ ${LOG} -eq 1 ]]; then
-echo "$(date +'[%Y-%m-%d %H:%M:%S %z]') ^ $1 ^ $2 ^ ${PGSERVER} ^ ${MINIO_ENDPOINT_URL} ^ ${MINIO_BACKET}" >> ${LOG_FILE}
+echo "$(date +'[%Y-%m-%d %H:%M:%S %z]') ^ $1 ^ $2 ^ ${PGSERVER} ^ ${MINIO_ENDPOINT_URL} ^ ${MINIO_BUCKET}" >> ${LOG_FILE}
 fi
 
 if [[ ${ARCHIVE} -eq 1 ]];
 then
-barman-cloud-wal-archive -j --endpoint-url ${MINIO_ENDPOINT_URL} s3://${MINIO_BACKET} ${PGSERVER} ${PDATA}/${1}
+barman-cloud-wal-archive -j --endpoint-url ${MINIO_ENDPOINT_URL} s3://${MINIO_BUCKET} ${PGSERVER} ${PDATA}/${1}
 RC=$?
 else
 RC=0

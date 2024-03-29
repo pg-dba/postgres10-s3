@@ -13,9 +13,9 @@ http://docs.pgbarman.org/release/2.15/manual.pdf<BR>
 
 <DIV><PRE>
 aws --endpoint-url http://u20d1h4:9000 s3 ls backups/$(hostname) --recursive
-aws --endpoint-url ${MINIO_ENDPOINT_URL} s3 ls ${MINIO_BACKET}/$(hostname) --recursive
+aws --endpoint-url ${MINIO_ENDPOINT_URL} s3 ls ${MINIO_BUCKET}/$(hostname) --recursive
 barman-cloud-backup-list --endpoint-url http://u20d1h4:9000 s3://backups $(hostname)
-barman-cloud-backup-list --endpoint-url ${MINIO_ENDPOINT_URL} s3://${MINIO_BACKET} $(hostname)
+barman-cloud-backup-list --endpoint-url ${MINIO_ENDPOINT_URL} s3://${MINIO_BUCKET} $(hostname)
 </PRE></DIV>
 
 
@@ -31,7 +31,7 @@ https://en.wikipedia.org/wiki/List_of_tz_database_time_zones<BR>
 <TR><TD>POSTGRES_INITDB_ARGS</TD><TD>--data-checksums --encoding=UTF8 --lc-collate='en_US.UTF-8' --lc-ctype='en_US.UTF-8'</TD></TR>
 <TR><TD>TZ</TD><TD>Etc/UTC</TD></TR>
 <TR><TD></TD><TD></TD></TR>
-<TR><TD>MINIO_BACKET</TD><TD>backups</TD></TR>
+<TR><TD>MINIO_BUCKET</TD><TD>backups</TD></TR>
 <TR><TD>MINIO_ENDPOINT_URL</TD><TD>http://u20d1h4:9000</TD></TR>
 <TR><TD>AWS_ACCESS_KEY_ID</TD><TD>minioadmin</TD></TR>
 <TR><TD>AWS_SECRET_ACCESS_KEY</TD><TD>P@ssw0rd</TD></TR>
